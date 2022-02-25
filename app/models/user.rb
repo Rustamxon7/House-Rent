@@ -7,5 +7,6 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 100 }
 
   has_many :reservations, dependent: :destroy
-  has_many :rooms, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :houses, through: :favorites
 end

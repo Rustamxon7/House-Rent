@@ -1,6 +1,6 @@
 class Reservation < ApplicationRecord
-  validates :check_in, :check_out, presence: true
+  validates :start_time, presence: true
 
   belongs_to :user
-  belongs_to :room
+  belongs_to :house
 end
